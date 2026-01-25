@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        height: 600px;
+        width: 100%;
+        background-color: white;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .mainbox {
+        height: 50px;
+        width: 50px;
+        background-color: bisque;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+
+
+
+
+
+
+    }
+
+    .box1 {
+        transform: rotate(50deg);
+    }
+
+    .box2 {
+        transform: rotateX(40deg);
+    }
+
+    .box3 {
+        transform: rotateY(40deg);
+    }
+
+    .box4 {
+        transform: scaleY(1.5);
+    }
+    /* skew z axis par work nhi karta */
+    .box5 {
+        transform: skewY(35deg);
+    }
+    .box6{
+        transform: translate(100%);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="mainbox box1">box</div>
+        <div class="mainbox box2">box</div>
+        <div class="mainbox box3">box</div>
+        <div class="mainbox box4">box</div>
+        <div class="mainbox box5">box</div>
+        <div class="mainbox box6">box</div>
+        <div class="mainbox box7">box</div>
+        <div class="mainbox"></div>
+        <div class="mainbox"></div>
+        <div class="mainbox"></div>
+    </div>
+</body>
+
+</html>
