@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Pages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+
+        }
+        .con{
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 20px;
+            font-size: 200px;
+        }
+
+        .row.top-row {
+            margin-bottom: 10px;
+            /* You can adjust this value */
+        }
+
+        .page-header h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #343a40;
+            margin: 0;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border-radius: 20px; */
+            /* width: 100%; */
+
+            /* height: 100%; */
+            border: none; 
+            background-color: transparent;
+        }
+
+
+        .box {
+            transition: transform 0.3s ease;
+            border: none; 
+            background-color: transparent;
+            
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            /* color: rgb(0, 181, 90); */
+        }
+
+        .card-image-wrapper {
+            /* background-color: #ffffff; */
+            border-radius: 20px;
+            /* height: 450px; */
+            /* width: 100%; */
+            /* display: block; */
+
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            max-width: 500px;
+            border-radius: 20px; 
+            border: 1px solid rgba(0, 0, 0, .125); 
+        }
+
+        .card-title-link {
+            text-decoration: none;
+            color: #212529;
+            font-weight: 600;
+            font-size: 20px;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+            text-align: center;
+            display: block;
+        }
+
+        .box:hover .card-title-link {
+            color: green;
+        }
+
+        .card.coming-soon {
+            border: 2px dashed #dee2e6;
+            background-color: transparent;
+            box-shadow: none;
+            transform: none;
+            min-height: 450px;
+            justify-content: center;
+        }
+
+        .card.coming-soon:hover {
+            transform: none;
+        }
+
+        .coming-soon .animation {
+            width: 5.5rem;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon h3 {
+            font-size: 1.25rem;
+            color: #495057;
+            margin: 0;
+        }
+        /* .card a{
+            border-radius: 20px; 
+            border: 1px solid rgba(0, 0, 0, .125); 
+            
+        } */
+
+        /* @media screen and (max-width: 767px) {
+            .box{
+                width: 60%;
+                display: flex;
+                justify-content: center;
+            }
+          } */
+
+
+
+
+
+
+        body {
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        .inner-pages-section {
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .inner-pages-container {
+            height: 700px;
+            width: 50%;
+            max-width: 1000px;
+            /* margin: 0 auto; */
+            position: absolute;
+            left: -100px;
+            padding: 2.5rem 1rem;
+            background-color: #ffc107;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+
+        }
+
+        .inner-pages-text-content {
+            max-width: 412px;
+            padding: 2rem;
+            color: #343a40;
+        }
+
+        .inner-pages-text-content h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .inner-pages-text-content p {
+            font-size: 1.125rem;
+            color: #495057;
+            margin-bottom: 0;
+        }
+
+        .inner-pages-image-stack {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 263px;
+            position: relative;
+            z-index: 1;
+            /* max-width: 1200px; */
+        }
+
+        .inner-pages-image-item {
+            max-width: 300px;
+            position: relative;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .inner-pages-image-item img {
+            width: 186%;
+            /* gap: 50px; */
+            display: flex;
+            justify-content: space-between;
+
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 1.875rem 0.625rem 5rem rgba(65, 81, 98, 0.2);
+        }
+
+        .inner-pages-image-item:nth-child(1) {
+            margin-top: 350px;
+            margin-right: 90px;
+            z-index: 3;
+
+        }
+
+        .inner-pages-image-item:nth-child(2) {
+            margin-top: 230px;
+            margin-right: 100px;
+            z-index: 2;
+
+        }
+
+        .inner-pages-image-item:nth-child(3) {
+            /* margin-bottom: 500px; */
+            margin-right: 250px;
+            z-index: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="page-header">
+            <h2>Landing pages</h2>
+            <p>Choose from pre-built layouts of our unique landing pages</p>
+        </header>
+        <div class="con">
+
+            <div class="row gy-5 pb-xl-3">
+
+                <div class="col-24 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box" >
+                        <div class="card" >
+                            <a >
+                                <img class="card-image" style="height: 100%; width: 100%;" src="mabile-app-showcase.jpg" alt="Mobile App Showcase">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Mobile App Showcase</a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-24 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="mabile-app-showcase.jpg" alt="Mobile App Showcase">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Mobile App Showcase</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="product-landing-light.jpg" alt="Product Landing">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Product Landing</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="saas-v1-light.jpg" alt="SaaS v.1">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Saas v.1</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="saas-v2-light.jpg" alt="SaaS v.2">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Saas v.2</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="saas-v3-light.jpg" alt="SaaS v.3">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Saas v.3</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="saas-v4-light.jpg" alt="SaaS v.4">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Saas v.4</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="shop-homepage-v1-light.jpg" alt="Shop Homepage v.1">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Shop Homepage v.1</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="shop-homepage-v2-light.jpg" alt="Shop Homepage v.2">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Shop Homepage v.2</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="marketing-agency-light.jpg" alt="Marketing Agency">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Marketing Agency</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="creative-agency-light.jpg" alt="Creative Agency">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Creative Agency</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="saas-v1-light.jpg" alt="Conference (Event)">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Conference (Event)</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="influencer-light.jpg" alt="Influencer">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Influencer</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="business-consulting-light.jpg" alt="Business Consulting">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Business Consulting</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="corporate-light.jpg" alt="Corporate">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Corporate</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="insurance-light.jpg" alt="Insurance Company">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Insurance Company</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="coworking-space-light.jpg" alt="Coworker Space">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Coworker Space</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="yoga-studio-light.jpg" alt="Yoga Studio">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Yoga Studio</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="web-studio-light.jpg" alt="Web Studio">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Web Studio</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card">
+                            <a class="card-image-wrapper">
+                                <img class="card-image" src="blog-homepage-light.jpg" alt="Blog Homepage">
+                            </a>
+                        </div>
+                        <a class="card-title-link">Blog Homepage</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="box">
+                        <div class="card coming-soon">
+                            <div class="animation">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"
+                                    fill="none" stroke="#6c757d" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-clock">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Coming Soon</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <br>
+    <br>
+
+
+
+    <div class="inner-pages-container">
+        <div class="inner-pages-text-content">
+            <h2>Inner pages for everything you may need</h2>
+            <p>Big collection of thoroughly designed inner page templates from User Account/Dashboard to Specialty pages
+                like 404 and Coming Soon.</p>
+        </div>
+    </div>
+
+    <div class="inner-pages-image-stack">
+        <div class="inner-pages-image-item">
+            <img src="01-light.jpg" alt="Page">
+        </div>
+        <div class="inner-pages-image-item">
+            <img src="02-light.jpg" alt="Page">
+        </div>
+        <div class="inner-pages-image-item">
+            <img src="03-light.jpg" alt="Page">
+        </div>
+    </div>
+    </section>
+
+
+
+</body>
+
+</html>
