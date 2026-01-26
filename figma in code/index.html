@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Inside Container</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+        }
+        
+        .container {
+            height: 630px;
+            width: 430px;
+            background-color: rgb(249, 240, 228);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .arches {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 44px;
+            font-weight: 700;
+            letter-spacing: 6px;
+            color: #083646;
+            margin-top: 37px;
+            z-index: 3;
+        }
+        
+        .circle {
+            position: absolute;
+            top: 117px;
+            left: 87px;
+            height: 78px;
+            width: 78px;
+            background-color: rgb(204, 85, 0);
+            border-radius: 50%;
+            /* z-index: 2; */
+        }
+        
+        .bar {
+            position: absolute;
+            top: 98px;
+            right: 67px;
+            width: 75px;
+            height: 255px;
+            background-color: rgb(212, 217, 204);
+            border-radius: 0px 60px 0px 0px;
+            z-index: 0;
+        }
+        
+        .inside {
+            position: absolute;
+            top: 125px;
+            left: 103px;
+            width: 225px;
+            height: 324px;
+            background-color: #e8c466;
+            border-radius: 150px 150px 0 0;
+            z-index: 1;
+        }
+        
+        .inside img {
+            position: absolute;
+            width: 205px;
+            left: 48%;
+            transform: translateX(-50%);
+            top: 47px;
+            z-index: 3;
+        }
+        
+        .poster-title {
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            bottom: 120px;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #a95f3a;
+            letter-spacing: 1px;
+        }
+        
+        .desc {
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            bottom: 65px;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 11px;
+            line-height: 17px;
+            color: #083646;
+            /* padding: 10px 10px; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <p class="arches">ARCHES</p>
+
+        <div class="circle"></div>
+        <div class="bar"></div>
+
+        <div class="inside">
+            <img src="aunty.png" alt="">
+        </div>
+
+        <div class="poster-title">POSTER TEMPLATE</div>
+
+        <div class="desc">
+            Consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad minim veniam, quis nostrud
+        </div>
+
+    </div>
+
+</body>
+
+</html>
